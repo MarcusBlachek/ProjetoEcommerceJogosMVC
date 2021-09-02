@@ -33,6 +33,8 @@ namespace ProjetoGamesEcommerce
             string connectionString = Configuration.GetConnectionString("default");
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddDistributedMemoryCache();
+            services.AddSession();
             services.AddDbContext<EcommerceJogosContext>(options => options.UseMySql(connectionString));
 
             services.AddTransient<IDataService, DataService>();
@@ -59,7 +61,9 @@ namespace ProjetoGamesEcommerce
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

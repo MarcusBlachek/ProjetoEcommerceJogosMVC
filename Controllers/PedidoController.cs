@@ -1,20 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EcommerceJogosEntities;
+using Microsoft.AspNetCore.Mvc;
 using ProjetoGamesEcommerce.Repositories;
 
 namespace ProjetoGamesEcommerce.Controllers
 {
     public class PedidoController : Controller
     {
-        private readonly IProdutoRepository produtoRepository;
+        private readonly IProdutoRepository _produtoRepository;
+        private readonly IPedidoRepository _pedidoRepository;
 
-        public PedidoController(IProdutoRepository produtoRepository)
+        public PedidoController(IProdutoRepository produtoRepository, IPedidoRepository pedidoRepository)
         {
-            this.produtoRepository = produtoRepository;
+            this._produtoRepository = produtoRepository;
+            this._pedidoRepository = pedidoRepository;
         }
 
         public IActionResult Carrossel()
         {
-            return View(produtoRepository.GetProdutos());
+            return View(_produtoRepository.GetProdutos());
         }
 
         public IActionResult Cadastro()
@@ -24,7 +27,8 @@ namespace ProjetoGamesEcommerce.Controllers
 
         public IActionResult Carrinho()
         {
-            return View();
+            Pedido pedido = _pedidoRepository.GetPedido();
+            return View(pedido.Items);
         }
 
         public IActionResult Resumo()
