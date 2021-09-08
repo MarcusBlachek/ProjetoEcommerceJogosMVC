@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using ProjetoGamesEcommerce.Models;
 
 namespace ProjetoGamesEcommerce
 {
@@ -8,6 +9,8 @@ namespace ProjetoGamesEcommerce
         public void Configure(EntityTypeBuilder<Cadastro> builder)
         {
             builder.ToTable("cadastros");
+
+            builder.HasKey(T => T.Id);
 
             builder.Property("Bairro")
                 .HasColumnType("varchar(50)")

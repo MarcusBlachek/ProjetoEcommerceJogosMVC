@@ -8,19 +8,19 @@ namespace ProjetoGamesEcommerce
 {
     class DataService : IDataService
     {
-        private readonly EcommerceJogosContext contexto;
+        private readonly EcommerceJogosContext _contexto;
         private readonly IProdutoRepository produtoRepository;
 
 
         public DataService(EcommerceJogosContext contexto,IProdutoRepository produtoRepository)
         {
             this.produtoRepository = produtoRepository;
-            this.contexto = contexto;
+            this._contexto = contexto;
         }
         
         public void InicializaDB()
         {
-            contexto.Database.EnsureCreated();
+            _contexto.Database.EnsureCreated();
             List<Jogo> jogos = GetJogos();
             produtoRepository.SaveProdutos(jogos);
         }

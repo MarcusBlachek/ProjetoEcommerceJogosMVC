@@ -1,6 +1,6 @@
-﻿using EcommerceJogosEntities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using ProjetoGamesEcommerce.Models;
 
 namespace ProjetoGamesEcommerce
 {
@@ -10,6 +10,8 @@ namespace ProjetoGamesEcommerce
         {
             builder.ToTable("itempedidos");
 
+            builder.HasKey(T => T.Id);
+
             builder.Property("PrecoUnitario")
                 .IsRequired();
 
@@ -18,7 +20,7 @@ namespace ProjetoGamesEcommerce
 
             builder.HasOne(p => p.Pedido).WithMany(p => p.Items);
 
-            builder.HasOne(p => p.Produto).WithMany(p => p.Items);
+            builder.HasOne(p => p.Produto);
         }
     }
 }

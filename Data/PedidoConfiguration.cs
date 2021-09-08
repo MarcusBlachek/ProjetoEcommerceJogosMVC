@@ -1,6 +1,6 @@
-﻿using EcommerceJogosEntities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using ProjetoGamesEcommerce.Models;
 
 namespace ProjetoGamesEcommerce
 {
@@ -9,6 +9,8 @@ namespace ProjetoGamesEcommerce
         public void Configure(EntityTypeBuilder<Pedido> builder)
         {
             builder.ToTable("pedidos");
+
+            builder.HasKey(T => T.Id);
 
             builder.HasMany(i => i.Items).WithOne(i => i.Pedido);
 

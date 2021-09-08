@@ -2,124 +2,75 @@
     ViewData["Title"] = "Carrinho";
 }
 
+@model IList<ItemPedido>;
+
 <h3>Meu Carrinho</h3>
 
 <div class="panel panel-default">
     <div class="panel-heading">
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 Item
             </div>
-            <div class="col-md-2 text-center">
-                Preço Unitário
-            </div>
-            <div class="col-md-2 text-center">
-                Quantidade
+            <div class="col-md-3">
+                Nome
             </div>
             <div class="col-md-2">
-                <span class="pull-right">
+                Preço Unitário
+            </div>
+            <div class="col-md-2">
+                Quantidade
+            </div>
+            <div class="col-md-1">
                     Subtotal
-                </span>
             </div>
         </div>
     </div>
     <div class="panel-body">
-        <div class="row row-center linha-produto">
-            <div class="col-md-3">
-                <img class="img-produto-carrinho" src="/images/produtos/Imagem1.jpg" />
-            </div>
-            <div class="col-md-3">PES 2021</div>
-            <div class="col-md-2 text-center">R$ 189,90</div>
-            <div class="col-md-2 text-center">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default">
-                            <span class="glyphicon-minus"></span>
-                        </button>
-                    </span>
-                    <input type="text" value="1"
-                           class="form-control text-center" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-default">
-                            <span class="glyphicon-plus"></span>
-                        </button>
+
+        @foreach (var item in Model)
+        {
+            <div class="row row-center linha-produto">
+                <div class="col-md-3">
+                    <img class="img-produto-carrinho" src="/images/produtos/imagem@(item.Produto.Codigo).jpg" />
+                </div>
+                <div class="col-md-3">@item.Produto.Nome</div>
+                <div class="col-md-2 text-center">@item.Produto.Preco.ToString("C")</div>
+                <div class="col-md-2 text-center">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default">
+                                <span class="glyphicon-minus"></span>
+                            </button>
+                        </span>
+                        <input type="text" value=@item.Quantidade
+                               class="form-control text-center" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default">
+                                <span class="glyphicon-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <span class="pull-right" subtotal>
+                        @((item.Quantidade * item.PrecoUnitario).ToString("C"))
                     </span>
                 </div>
             </div>
-            <div class="col-md-2">
-                R$ <span class="pull-right" subtotal>
-                    189,90
-                </span>
-            </div>
-        </div>
-        <div class="row row-center linha-produto">
-            <div class="col-md-3">
-                <img class="img-produto-carrinho" src="/images/produtos/imagem4.jpg" />
-            </div>
-            <div class="col-md-3">Red Dead Redemption 2</div>
-            <div class="col-md-2 text-center">R$ 200,00</div>
-            <div class="col-md-2 text-center">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default">
-                            <span class="glyphicon-minus"></span>
-                        </button>
-                    </span>
-                    <input type="text" value="1"
-                           class="form-control text-center" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-default">
-                            <span class="glyphicon-plus"></span>
-                        </button>
-                    </span>
-                </div>
-            </div>
-            <div class="col-md-2">
-                R$ <span class="pull-right" subtotal>
-                    200,00
-                </span>
-            </div>
-        </div>
-        <div class="row row-center linha-produto">
-            <div class="col-md-3">
-                <img class="img-produto-carrinho" src="/images/produtos/Imagem2.jpg" />
-            </div>
-            <div class="col-md-3">F1 2021</div>
-            <div class="col-md-2 text-center">R$ 189,90</div>
-            <div class="col-md-2 text-center">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default">
-                            <span class="glyphicon-minus"></span>
-                        </button>
-                    </span>
-                    <input type="text" value="1"
-                           class="form-control text-center" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-default">
-                            <span class="glyphicon-plus"></span>
-                        </button>
-                    </span>
-                </div>
-            </div>
-            <div class="col-md-2">
-                R$ <span class="pull-right" subtotal>
-                    189,90
-                </span>
-            </div>
-        </div>
+        }
     </div>
     <div class="panel-footer">
         <div class="row">
             <div class="col-md-10">
                 <span numero-itens>
-                    Total: 3
+                    Total: @Model.Count()
                     itens
                 </span>
             </div>
             <div class="col-md-2">
-                Total: R$ 579,80<span class="pull-right" total>
+                Total:  @(Model.Sum(i => i.Quantidade * i.PrecoUnitario).ToString("C"))<span class="pull-right" total>
 
                 </span>
             </div>
@@ -130,7 +81,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="pull-right">
-            <a class="btn btn-success" 
+            <a class="btn btn-success"
                asp-action="carrossel">
                 Adicionar Produtos
             </a>

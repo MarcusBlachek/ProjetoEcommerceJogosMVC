@@ -61,15 +61,15 @@ namespace ProjetoGamesEcommerce
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
-            app.UseCookiePolicy();
             app.UseSession();
+            app.UseCookiePolicy();
+           
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Pedido}/{action=Carrossel}/{id?}");
+                    template: "{controller=Pedido}/{action=Carrossel}");
             });
 
             serviceProvider.GetService<IDataService>().InicializaDB();

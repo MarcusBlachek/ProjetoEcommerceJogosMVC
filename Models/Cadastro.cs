@@ -1,37 +1,42 @@
-﻿using EcommerceJogosEntities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-
+namespace ProjetoGamesEcommerce.Models
+{
     public class Cadastro : BaseModel
     {
+        [Required]
         public string Nome { get; set; }
+        [Required]
+
         public string Email { get; set; }
+        [Required]
+
         public string Telefone { get; set; }
+        [Required]
+
         public string Endereco { get; set; }
+        [Required]
+
         public string Complemento { get; set; }
+        [Required]
+
         public string Bairro { get; set; }
+        [Required]
+
         public string Cep { get; set; }
+        [Required]
+
         public string Municipio { get; set; }
+        [Required]
+
         public string Uf { get; set; }
-        public IList<Pedido> Pedidos  { get; set; }
+        public List<Pedido> Pedidos { get; set; }
 
         public Cadastro()
         {
         }
-
-        public Cadastro(string nome, string email, string telefone
-            , string complemento, string bairro, string cep
-            , string endereco, string municipio, string uf)
-        {
-            Nome = nome;
-            Email = email;
-            Telefone = telefone;
-            Endereco = endereco;
-            Complemento = complemento;
-            Bairro = bairro;
-            Cep = cep;
-            Municipio = municipio;
-            Uf = uf;
-        }
     }
+
+}
 

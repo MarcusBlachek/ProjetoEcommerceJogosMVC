@@ -1,6 +1,7 @@
 C:\Users\Dell\source\repos\ProjetoGamesEcommerce\bin\Debug\netcoreapp2.1\appsettings.Development.json
 C:\Users\Dell\source\repos\ProjetoGamesEcommerce\bin\Debug\netcoreapp2.1\appsettings.json
 C:\Users\Dell\source\repos\ProjetoGamesEcommerce\bin\Debug\netcoreapp2.1\bundleconfig.json
+C:\Users\Dell\source\repos\ProjetoGamesEcommerce\bin\Debug\netcoreapp2.1\jogos.json
 C:\Users\Dell\source\repos\ProjetoGamesEcommerce\bin\Debug\netcoreapp2.1\ProjetoGamesEcommerce.deps.json
 C:\Users\Dell\source\repos\ProjetoGamesEcommerce\bin\Debug\netcoreapp2.1\ProjetoGamesEcommerce.runtimeconfig.json
 C:\Users\Dell\source\repos\ProjetoGamesEcommerce\bin\Debug\netcoreapp2.1\ProjetoGamesEcommerce.runtimeconfig.dev.json
@@ -33,4 +34,3 @@ C:\Users\Dell\source\repos\ProjetoGamesEcommerce\obj\Debug\netcoreapp2.1\Projeto
 C:\Users\Dell\source\repos\ProjetoGamesEcommerce\obj\Debug\netcoreapp2.1\ProjetoGamesEcommerce.pdb
 C:\Users\Dell\source\repos\ProjetoGamesEcommerce\obj\Debug\netcoreapp2.1\ProjetoGamesEcommerce.genruntimeconfig.cache
 C:\Users\Dell\source\repos\ProjetoGamesEcommerce\obj\Debug\netcoreapp2.1\ProjetoGamesEcommerce.csproj.CopyComplete
-C:\Users\Dell\source\repos\ProjetoGamesEcommerce\bin\Debug\netcoreapp2.1\jogos.json

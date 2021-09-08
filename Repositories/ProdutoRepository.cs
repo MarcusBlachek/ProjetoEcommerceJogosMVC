@@ -1,6 +1,5 @@
-﻿using EcommerceJogosEntities;
-using Microsoft.EntityFrameworkCore;
-using ProjetoGamesEcommerce.Data;
+﻿using ProjetoGamesEcommerce.Data;
+using ProjetoGamesEcommerce.Models;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,8 +7,10 @@ namespace ProjetoGamesEcommerce.Repositories
 {
     public class ProdutoRepository : BaseRepository<Produto>, IProdutoRepository
     {
+        
         public ProdutoRepository(EcommerceJogosContext contexto) : base(contexto)
         {
+           
         }
 
         public IList<Produto> GetProdutos()
@@ -27,12 +28,12 @@ namespace ProjetoGamesEcommerce.Repositories
                 }
             }
 
-            contexto.SaveChanges();
+            _contexto.SaveChanges();
         }
     }
     public class Jogo
     {
-        public int Codigo { get; set; }
+        public string Codigo { get; set; }
         public string Nome { get; set; }
         public double Preco { get; set; }
     }

@@ -1,5 +1,5 @@
-﻿using EcommerceJogosEntities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoGamesEcommerce.Models;
 
 namespace ProjetoGamesEcommerce.Data
 {

@@ -1,4 +1,4 @@
-﻿using EcommerceJogosEntities;
+﻿using ProjetoGamesEcommerce.Models;
 using System.Collections.Generic;
 
 namespace ProjetoGamesEcommerce.Repositories

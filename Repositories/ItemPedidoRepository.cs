@@ -1,5 +1,5 @@
-﻿using EcommerceJogosEntities;
-using ProjetoGamesEcommerce.Data;
+﻿using ProjetoGamesEcommerce.Data;
+using ProjetoGamesEcommerce.Models;
 
 namespace ProjetoGamesEcommerce.Repositories
 {

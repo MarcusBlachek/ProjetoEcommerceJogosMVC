@@ -1,101 +1,101 @@
 [
   {
-    "Codigo": "001",
+    "Codigo": "1",
     "Nome": "PES 2021",
     "Preco": 189.90
   },
   {
-    "Codigo": "002",
+    "Codigo": "2",
     "Nome": "F1 2021",
     "Preco": 189.90
   },
   {
-    "Codigo": "003",
+    "Codigo": "3",
     "Nome": "Resident Evil Village",
     "Preco": 200.00
   },
   {
-    "Codigo": "004",
+    "Codigo": "4",
     "Nome": "Red Dead Redemption 2",
     "Preco": 200.00
   },
   {
-    "Codigo": "005",
+    "Codigo": "5",
     "Nome": "FIFA 2021",
     "Preco": 189.90
   },
   {
-    "Codigo": "006",
+    "Codigo": "6",
     "Nome": "Dragon Age Inquisition",
     "Preco": 200.00
   },
   {
-    "Codigo": "007",
+    "Codigo": "7",
     "Nome": "Uncharted",
     "Preco": 200.00
   },
   {
-    "Codigo": "008",
+    "Codigo": "8",
     "Nome": "Hitman 3",
     "Preco": 200.00
   },
   {
-    "Codigo": "009",
+    "Codigo": "9",
     "Nome": "Detroit",
     "Preco": 200.00
   },
   {
-    "Codigo": "010",
+    "Codigo": "10",
     "Nome": "Batman Arkham Nights",
     "Preco": 200.00
   },
   {
-    "Codigo": "011",
+    "Codigo": "11",
     "Nome": "Injustice",
     "Preco": 200.00
   },
   {
-    "Codigo": "012",
+    "Codigo": "12",
     "Nome": "God Of War",
     "Preco": 200.00
   },
   {
-    "Codigo": "013",
+    "Codigo": "13",
     "Nome": "Sniper Elite 4",
     "Preco": 200.00
   },
   {
-    "Codigo": "014",
+    "Codigo": "14",
     "Nome": "Avengers",
     "Preco": 169.90
   },
   {
-    "Codigo": "015",
+    "Codigo": "15",
     "Nome": "Nioh 2",
     "Preco": 200.00
   },
   {
-    "Codigo": "016",
+    "Codigo": "16",
     "Nome": "The last of Us 2",
     "Preco": 200.00
   },
   {
-    "Codigo": "017",
+    "Codigo": "17",
     "Nome": "Assassins Creed Collection",
     "Preco": 169.90
   },
   {
-    "Codigo": "018",
+    "Codigo": "18",
     "Nome": "Battlefield 4",
     "Preco": 200.00
   },
   {
-    "Codigo": "019",
-    "Nome": "Os incríveis",
+    "Codigo": "19",
+    "Nome": " Lego - Os incríveis",
     "Preco": 169.90
   },
   {
-    "Codigo": "020",
+    "Codigo": "20",
     "Nome": "Watch Dogs 2",
     "Preco": 200.00
   }
